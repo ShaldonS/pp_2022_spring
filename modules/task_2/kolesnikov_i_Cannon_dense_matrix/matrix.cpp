@@ -93,18 +93,15 @@ std::vector< std::vector<double>> Matrix::cannonAlgorithmOMP(Matrix matrix1, Mat
                 if (num_threads < size) {
                     if (thread_num == num_threads - 1) {
                         block_size = size;
-                    }
-                    else {
+                    } else {
                         block_size = start + block_size;
                     }
-                }
-                else if (num_threads > size) {
+                } else if (num_threads > size) {
                     if (thread_num < size) {
                         start = thread_num;
                         block_size = thread_num + 1;
                     }
-                }
-                else {
+                } else {
                     block_size *= (thread_num + 1);
                 }
             }

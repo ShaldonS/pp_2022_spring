@@ -3,7 +3,7 @@
 #include "./matrix.h"
 
 TEST(CannonTest, test_1) {
-    size_t size = 100;
+    size_t size = 121;
     Matrix matrix1(size);
     Matrix matrix2(size);
 

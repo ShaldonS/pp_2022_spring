@@ -1,9 +1,9 @@
 // Copyright 2022 Kolesnikov Ilya
 #ifndef MODULES_TASK_2_KOLESNIKOV_I_CANNON_DENSE_MATRIX_MATRIX_H_
 #define MODULES_TASK_2_KOLESNIKOV_I_CANNON_DENSE_MATRIX_MATRIX_H_
+#include <omp.h>
 #include <vector>
 #include <iostream>
-#include <omp.h>
 
 class Matrix {
  public:
