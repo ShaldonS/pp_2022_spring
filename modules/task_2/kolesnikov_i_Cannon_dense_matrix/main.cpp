@@ -67,7 +67,7 @@ TEST(CannonTest, test_4) {
     Matrix matrix1(size);
     Matrix matrix2(size);
 
-    double num1 = 1.076, num2 = 2.067;
+    double num1 = 1.076, num2 = 2.066;
     matrix1.generateMatrix(num1);
     matrix2.generateMatrix(num2);
 
