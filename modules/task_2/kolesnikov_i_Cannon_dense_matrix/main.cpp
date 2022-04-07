@@ -24,8 +24,8 @@ TEST(CannonTest, test_1) {
     double time_omp = end_t - start_t;
     std::cout << "\nParallel Time:" << time_omp << "\n\n";
 
-    bool check = (time_seq > time_omp);
-    ASSERT_EQ(check, true);
+    std::vector<std::vector<double>> matr1 = matrix4.get_matrix(), matr2 = matrix5.get_matrix();
+    ASSERT_DOUBLE_EQ(matr1[1][1], matr2[1][1]);
 }
 
 TEST(CannonTest, test_2) {
@@ -40,7 +40,7 @@ TEST(CannonTest, test_2) {
     Matrix matrix4(matrix1.cannonAlgorithmSeq(matrix1, matrix2), size);
 
     Matrix matrix5(matrix1.cannonAlgorithmOMP(matrix1, matrix2, 5), size);
-    
+
     std::vector<std::vector<double>> matr1 = matrix4.get_matrix(), matr2 = matrix5.get_matrix();
     ASSERT_DOUBLE_EQ(matr1[0][0], matr2[0][0]);
 }
@@ -93,7 +93,7 @@ TEST(CannonTest, test_5) {
 
     Matrix matrix4(matrix1.cannonAlgorithmSeq(matrix1, matrix2), size);
 
-    Matrix matrix5(matrix1.cannonAlgorithmOMP(matrix1, matrix2, 5), size);
+    Matrix matrix5(matrix1.cannonAlgorithmOMP(matrix1, matrix2, 2), size);
 
     std::vector<std::vector<double>> matr1 = matrix4.get_matrix(), matr2 = matrix5.get_matrix();
 
